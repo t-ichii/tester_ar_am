@@ -1,6 +1,6 @@
 # Tester Of ActiveRecord/ActiveModel
 
-This is tester for ActiveRecord/ActiveModel.
+This is tester for ActiveRecord/ActiveModel without **Rails**.
 
 ## License
 
