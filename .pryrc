@@ -10,6 +10,10 @@ dbconfig = ::YAML.load(ERB.new(File.read('config/database.yml')).result)['defaul
 ActiveRecord::Base.establish_connection(dbconfig)
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
-Dir.glob('models/*').map {|file_path|
-  require_relative file_path
-}
+def reload!
+  Dir.glob('models/*').map {|file_path|
+    load file_path
+  }
+end
+
+reload!
